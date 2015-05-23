@@ -44,6 +44,24 @@
 }
 ```
 
+### It even supports multiple values...
+
+```css
+.baz {
+    padding-vert: 10px 15px;
+    margin-horz: 15px 21px;
+}
+```
+
+```css
+.baz {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 21px;
+}
+```
+
 ## Usage
 
 ```js
