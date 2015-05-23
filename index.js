@@ -23,6 +23,9 @@ module.exports = postcss.plugin('postcss-verthorz', function () {
     return function (css) {
         css.eachRule(function (rule) {
             rule.each(function(decl) {
+
+                var declArray = decl.value.split(' ');
+
                 var prop = decl.prop;
 
                 if (!PROPS.hasOwnProperty(prop)) return;
@@ -30,7 +33,11 @@ module.exports = postcss.plugin('postcss-verthorz', function () {
                 var properties = PROPS[prop];
 
                 properties.forEach(function(property, index) {
-                    decl.cloneBefore({ prop: properties[index], value: decl.value });
+                    if (declArray.length > 1) {
+                        decl.cloneBefore({ prop: properties[index], value: declArray[index] });
+                    } else {
+                        decl.cloneBefore({ prop: properties[index], value: decl.value });
+                    }
                 });
 
                 decl.removeSelf();

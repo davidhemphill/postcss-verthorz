@@ -55,6 +55,10 @@ describe('postcss-verthorz', function () {
         test('a { padding-vert: 3rem; mh: 2rem; }', 'a { padding-top: 3rem; padding-bottom: 3rem; margin-left: 2rem; margin-right: 2rem; }', { }, done);
     });
 
+    it('handles multiple values', function (done) {
+        test('a { padding-vert: 3rem 1rem; }', 'a { padding-top: 3rem; padding-bottom: 1rem; }', { }, done);
+    });
+
     it('handles failures', function (done) {
         test('a { padding-nope: 20px; }', 'a { padding-nope: 20px; }', { }, done);
     });
