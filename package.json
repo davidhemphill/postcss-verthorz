@@ -1,7 +1,7 @@
 {
     "name": "postcss-verthorz",
     "version": "0.5.0",
-    "description": "PostCSS plugin to add vertical and horizontal spacing rules",
+    "description": "PostCSS plugin to add vertical and horizontal spacing shorthand",
     "keywords": ["postcss", "css", "postcss-plugin", "margin", "padding", "spacing"],
     "author": "David Hemphill <davidlee.hemphill@gmail.com>",
     "license": "MIT",

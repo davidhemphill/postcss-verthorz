@@ -1,7 +1,6 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-verthorz', function (opts) {
-    opts = opts || {};
+module.exports = postcss.plugin('postcss-verthorz', function () {
 
     var VALUES = {
         pv: ['padding-top', 'padding-bottom'],
