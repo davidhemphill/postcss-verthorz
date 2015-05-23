@@ -44,7 +44,7 @@
 }
 ```
 
-### It even supports multiple values...
+### It even supports multiple values!
 
 ```css
 .baz {
@@ -57,8 +57,8 @@
 .baz {
     padding-top: 10px;
     padding-bottom: 15px;
-    margin-right: 15px;
-    margin-left: 21px;
+    margin-left: 15px;
+    margin-right: 21px;
 }
 ```
 
