@@ -47,4 +47,16 @@ describe('postcss-verthorz', function () {
         test('a { mh: 2rem; }', 'a { margin-left: 2rem; margin-right: 2rem; }', { }, done);
     });
 
+    it('handles auto', function (done) {
+        test('a { ph: 3rem; mh: auto; }', 'a { padding-left: 3rem; padding-right: 3rem; margin-left: auto; margin-right: auto; }', { }, done);
+    });
+
+    it('handles multiples', function (done) {
+        test('a { padding-vert: 3rem; mh: 2rem; }', 'a { padding-top: 3rem; padding-bottom: 3rem; margin-left: 2rem; margin-right: 2rem; }', { }, done);
+    });
+
+    it('handles `failures`', function (done) {
+        test('a { padding-nope: 20px; }', 'a { padding-nope: 20px; }', { }, done);
+    });
+
 });
