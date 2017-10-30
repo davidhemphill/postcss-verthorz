@@ -21,7 +21,7 @@ module.exports = postcss.plugin('postcss-verthorz', function () {
     };
 
     return function (css) {
-        css.eachRule(function (rule) {
+        css.each(function (rule) {
             rule.each(function(decl) {
 
                 var declArray = decl.value.split(' ');
@@ -40,7 +40,7 @@ module.exports = postcss.plugin('postcss-verthorz', function () {
                     }
                 });
 
-                decl.removeSelf();
+                decl.remove();
             });
         });
     };
