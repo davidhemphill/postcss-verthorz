@@ -24,9 +24,9 @@ module.exports = postcss.plugin('postcss-verthorz', function () {
         'mh': VALUES.mh
     };
 
-    return function (css) {
-        css.each(function (rule) {
-            rule.each(function(decl) {
+    return function (root) {
+        root.walkRules(function (rule) {
+            rule.walkDecls(function(decl) {
 
                 var declArray = decl.value.split(' ');
 
