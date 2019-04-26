@@ -1,6 +1,6 @@
 {
   "name": "postcss-verthorz",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "PostCSS plugin to add vertical and horizontal spacing shorthand",
   "keywords": [
     "postcss",
@@ -17,13 +17,13 @@
     "url": "https://github.com/davidhemphill/postcss-verthorz.git"
   },
   "dependencies": {
-    "postcss": "^6.0.13"
+    "postcss": "^7.0.14"
   },
   "devDependencies": {
-    "gulp-eslint": "^4.0.0",
-    "gulp-mocha": "^4.3.1",
-    "chai": "^4.1.2",
-    "gulp": "^3.8.11"
+    "chai": "^4.2.0",
+    "gulp": "^4.0.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-mocha": "^6.0.0"
   },
   "scripts": {
     "test": "gulp"

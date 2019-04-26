@@ -10,19 +10,23 @@ module.exports = postcss.plugin('postcss-verthorz', function () {
     };
 
     var PROPS = {
+        'padding-vertical': VALUES.pv,
+        'padding-horizontal': VALUES.ph,
         'padding-vert': VALUES.pv,
         'padding-horz': VALUES.ph,
         'pv': VALUES.pv,
         'ph': VALUES.ph,
+        'margin-vertical': VALUES.mv,
+        'margin-horizontal': VALUES.mh,
         'margin-vert': VALUES.mv,
         'margin-horz': VALUES.mh,
         'mv': VALUES.mv,
         'mh': VALUES.mh
     };
 
-    return function (css) {
-        css.each(function (rule) {
-            rule.each(function(decl) {
+    return function (root) {
+        root.walkRules(function (rule) {
+            rule.walkDecls(function(decl) {
 
                 var declArray = decl.value.split(' ');
 

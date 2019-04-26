@@ -8,6 +8,24 @@
 
 ## Examples
 
+### Shorthand `vertical` and `horizontal` declarations
+
+```css
+.foo {
+    padding-vertical: 2rem;
+    margin-horizontal: auto;
+}
+```
+
+```css
+.foo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
 ### Shorthand `vert` and `horz` declarations
 
 ```css
