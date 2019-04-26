@@ -15,6 +15,14 @@ var test = function (input, output, opts, done) {
 
 describe('postcss-verthorz', function () {
 
+    it('handles padding-vertical', function (done) {
+        test('a { padding-vertical: 20px; }', 'a { padding-top: 20px; padding-bottom: 20px; }', { }, done);
+    });
+
+    it('handles padding-horizontal', function (done) {
+        test('a { padding-horizontal: 1.5em; }', 'a { padding-left: 1.5em; padding-right: 1.5em; }', { }, done);
+    });
+
     it('handles padding-vert', function (done) {
         test('a { padding-vert: 20px; }', 'a { padding-top: 20px; padding-bottom: 20px; }', { }, done);
     });
@@ -37,6 +45,14 @@ describe('postcss-verthorz', function () {
 
     it('handles margin-horz', function (done) {
         test('a { margin-horz: 2rem; }', 'a { margin-left: 2rem; margin-right: 2rem; }', { }, done);
+    });
+
+    it('handles margin-vertical', function (done) {
+        test('a { margin-vertical: 2rem; }', 'a { margin-top: 2rem; margin-bottom: 2rem; }', { }, done);
+    });
+
+    it('handles margin-horizontal', function (done) {
+        test('a { margin-horizontal: 2rem; }', 'a { margin-left: 2rem; margin-right: 2rem; }', { }, done);
     });
 
     it('handles mv', function (done) {
